@@ -12,7 +12,7 @@ datasource db {
   // REMOVE THIS LINE: (Unsupported in v7) url = env("DATABASE_URL")
 }
 
-model Task {
+model Task {//1-F
   id  Int @id @default(autoincrement())
   title String
   isDone Boolean @default(false)

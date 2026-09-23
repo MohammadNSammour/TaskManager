@@ -20,7 +20,7 @@ exports.createTask = async (req,res)=>{
     res.status(201).json(newTask);
 };
 
-exports.updateTask = async (req,res)=>{
+exports.updateTask = async (req,res)=>{//1-E
     const {id} = req.params;
     const {isDone} = req.body;
     const updatedTask = await prisma.task.update({
