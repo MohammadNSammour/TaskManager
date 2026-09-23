@@ -24,7 +24,7 @@ const addTask = async (title) =>{
   });
   fetchTasks();
 };
-const toggleTask = async(id, isDone)=>{
+const toggleTask = async(id, isDone)=>{//1-A
   await fetch(/*`http://localhost:5000*/`${API_URL}/${id}`/*/api/${id}`*/,{
     method: 'PUT',
     headers:{'Content-Type':'application/json'},
@@ -33,7 +33,7 @@ const toggleTask = async(id, isDone)=>{
   fetchTasks();
 };
 const deleteTask = async(id)=>{
-  await fetch(/*`http://localhost:5000*/`${API_URL}/api/${id}`,{
+  await fetch(/*`http://localhost:5000*/`${API_URL}/${id}`/*/api/${id}`*/,{
     method: 'DELETE'
   });
   fetchTasks();

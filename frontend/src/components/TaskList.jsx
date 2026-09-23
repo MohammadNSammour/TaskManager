@@ -5,7 +5,7 @@ function TaskList({tasks,onToggle,onDelete}){
             {
                 tasks.map((task)=>{
                     return <li key = {task.id} style={{display:'flex',gap:8,alignItems:'center',marginBottom:8}}>
-                        <input type = "checkbox" checked={task.isDone} onChange={()=>onToggle(task.id,task.isDone)}
+                        <input type = "checkbox" checked={task.isDone} onChange={()=>onToggle(task.id,task.isDone)}//1-B
                         /> 
                         <span style={{textDecoration:task.isDone?'line-through':'none',flex:1}}>
                             {task.title}
